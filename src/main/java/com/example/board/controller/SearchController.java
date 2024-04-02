@@ -1,5 +1,5 @@
 package com.example.board.controller;
 
-public class SearchCountroller {
+public class SearchController {
     
 }
