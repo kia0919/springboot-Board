@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.board.dto.response.ResponseDto;
 import com.example.board.dto.response.board.GetLatestListReponseDto;
 
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class BoardCountroller {
     private final BoardService boardService;
 
     @GetMapping("/latest-list")
-    public ResponseEntity<GetLatestListReponseDto> getLatestList() {
+    public ResponseEntity<? extends GetLatestListReponseDto> getLatestList() {
         return null;
     }
 
