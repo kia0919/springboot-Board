@@ -18,7 +18,7 @@ import lombok.Setter;
 @IdClass(FavoritePk.class)
 public class FavoriteEntity {
     @Id
-    private Integer boardnumber;
+    private Integer boardNumber;
     @Id // 둘다 복합키인 pk이므로 각각 @id로 지정하여 섞이게 한다.
-    private String useremail;
+    private String userEmail;
 }
