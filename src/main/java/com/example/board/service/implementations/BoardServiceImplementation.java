@@ -3,6 +3,7 @@ package com.example.board.service.implementations;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -23,14 +24,14 @@ public class BoardServiceImplementation implements BoardService {
 
     @Override
     public ResponseEntity<? super GetLatestListResponseDto> getLatestList() {
-
+        
         try {
-        // 1. 데이터베이스에서 최신순으로 데이터를 조회
-
-        }   catch (Exception exception) {
-                return ResponseDto.databaseError();
-                // ResponseDto body = new ResponseDto(ResponseCode.DATABASE_ERROR, ResponseMessage.DATABASE_ERROR);
-                
+            // 1. 데이터베이스에서 최신순으로 데이터를 조회
+            
+        } catch (Exception exception) {
+            return ResponseDto.databaseError();
+            // ResponseDto body = new ResponseDto(ResponseCode.DATABASE_ERROR, ResponseMessage.DATABASE_ERROR);
+            // return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(body);
         }
 
         // 2. 조회 결과를 BoardListItem의 리스트로 변경
@@ -42,4 +43,6 @@ public class BoardServiceImplementation implements BoardService {
         // return ResponseEntity.status(HttpStatus.OK).body(body);
 
     }
+
+    
 }
