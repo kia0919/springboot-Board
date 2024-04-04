@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/board")
-@RequiredArgsConstructor
+@RequiredArgsConstructor    
 public class BoardController {
 
     private final BoardService BoardService;
