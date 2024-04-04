@@ -32,4 +32,10 @@ public class SignUpRequestDto {
     
 
     private String addressDetail;
+
+
+    public String patchNickName() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'patchNickName'");
+    }
 }

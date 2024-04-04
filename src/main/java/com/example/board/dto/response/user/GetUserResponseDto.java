@@ -1,5 +1,6 @@
 package com.example.board.dto.response.user;
 
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -26,5 +27,7 @@ public class GetUserResponseDto extends ResponseDto {
     public static ResponseEntity<GetUserResponseDto> success(UserEntity userEntity) {
         GetUserResponseDto body = new GetUserResponseDto(userEntity);
         return ResponseEntity.status(HttpStatus.OK).body(body);
+
+        
     }
 }
